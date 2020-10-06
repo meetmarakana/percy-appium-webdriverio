@@ -1,0 +1,35 @@
+{
+  "name": "percy-appium-webdriverio",
+  "version": "0.1.0",
+  "description": "percy library for appium and webdriverio projects. it creates the fake page data and send it to percy client. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "dependencies": {
+    "@percy/agent": "~0",
+    "jsdom": "^15.1.1",
+    "slug": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=8.2.0"
+  },
+  "keywords": [
+    "npm",
+    "visual testing",
+    "native visual testing",
+    "percy",
+    "percy-appium",
+    "percy-appium-webdriverio",
+    "webdriverio",
+    "appium-webdrivrio",
+    "appium"
+  ],
+  "repository": {},
+  "author": "Meet R. Marakana",
+  "license": "ISC"
+}
