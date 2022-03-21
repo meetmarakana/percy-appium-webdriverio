@@ -12,11 +12,11 @@ Assuming you have an existing Appium setup using WebdriverIO:
 
 - Install the `percy-appium-webdriverio` package: `npm i -D percy-appium-webdriverio`
 - `require` the SDK into the test suite (this can be done anywhere before the tests start): `require('percy-appium-webdriverio');`
-- Call `await percySnapshot(driver, 'snapshot name')` in your tests (for
+- Call `await percyAppiumSnapshot(driver, 'snapshot name')` in your tests (for
   example):
 ```js
 test('Percy works', async () => {
-  await percySnapshot(driver, 'test');
+  await percyAppiumSnapshot(driver, 'test');
 });
 ```
 - Finally, when running your tests, wrap the test command with `percy exec`. For
