@@ -1,7 +1,7 @@
 {
   "name": "percy-appium-webdriverio",
-  "version": "0.1.0",
-  "description": "percy library for appium and webdriverio projects. it creates the fake page data and send it to percy client. ",
+  "version": "0.3.0",
+  "description": "percy-appium-webdriverio is a librabry that takes snapshots of the html pages and perform visual testing on it. This library can be used with appium and webdriverio. It takes the screenshot of the page and render a fake html page data and send that one to percy dashboard.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
     "#USER"
   ],
   "dependencies": {
-    "@percy/agent": "~0",
+    "@percy/cli": "^1.0.0-beta.76",
+    "@percy/sdk-utils": "^1.0.0-beta.76",
     "jsdom": "^15.1.1",
     "slug": "^1.1.0"
   },
@@ -29,7 +30,10 @@
     "appium-webdrivrio",
     "appium"
   ],
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meetmarakana/percy-appium-webdriverio"
+  },
   "author": "Meet R. Marakana",
   "license": "ISC"
 }
