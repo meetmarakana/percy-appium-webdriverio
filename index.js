@@ -7,11 +7,6 @@ const webdriverPkg = require('webdriverio/package.json');
 const { postSnapshot, isPercyEnabled } = require('@percy/sdk-utils');
 const {PercyClient} = require('@percy/client');
 
-// Webdriver extension for taking Percy snapshots
-//
-// Usage:
-//   percySnapshot(driver, 'My Snapshot', { options });
-
 function uid() {
   return `_${Math.random().toString(36).substr(2, 9)}`;
 } // Marks elements that are to be serialized later with a data attribute.
@@ -235,7 +230,13 @@ function serializeDOM(options) {
   return doctype(dom) + doc.outerHTML;
 }
 
-exports.percySnapshot = async function percySnapshot(driver, name, options = {}) {
+
+// Webdriver extension for taking Percy snapshots
+//
+// Usage:
+//   percyAppiumSnapshot(driver, 'My Snapshot', { options });
+
+exports.percyAppiumSnapshot = async function percyAppiumSnapshot(driver, name, options = {}) {
   // Appends the device name to the snapshot name
   if (options.appendDeviceName) {
     const capabilities = await driver.sessionCapabilities();
