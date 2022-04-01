@@ -11,8 +11,8 @@
     "#USER"
   ],
   "dependencies": {
-    "@percy/cli": "^1.0.0-beta.76",
-    "@percy/sdk-utils": "^1.0.0-beta.76",
+    "@percy/cli": "1.0.0-beta.76",
+    "@percy/sdk-utils": "1.0.0-beta.76",
     "jsdom": "^15.1.1",
     "slug": "^1.1.0"
   },
