@@ -1,6 +1,6 @@
 {
   "name": "percy-appium-webdriverio",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "percy-appium-webdriverio is a librabry that takes snapshots of the html pages and perform visual testing on it. This library can be used with appium and webdriverio. It takes the screenshot of the page and render a fake html page data and send that one to percy dashboard.",
   "main": "index.js",
   "scripts": {
