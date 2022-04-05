@@ -8,7 +8,19 @@ and [WebdriverIo](https://webdriver.io)
 
 ## Quick start
 
-Assuming you have an existing Appium setup using WebdriverIO:
+To use for WebdriverIO:
+
+- Install the `percy-appium-webdriverio` package: `npm i -D percy-appium-webdriverio`
+- `require` the SDK into the test suite (this can be done anywhere before the tests start): `require('percy-appium-webdriverio');`
+- Call `await percySnapshot(driver, 'snapshot name')` in your tests (for
+  example):
+```js
+test('Percy works', async () => {
+  await percyAppiumSnapshot(driver, 'test');
+});
+```
+
+To use for Appium setup with WebdriverIO:
 
 - Install the `percy-appium-webdriverio` package: `npm i -D percy-appium-webdriverio`
 - `require` the SDK into the test suite (this can be done anywhere before the tests start): `require('percy-appium-webdriverio');`
@@ -19,7 +31,22 @@ test('Percy works', async () => {
   await percyAppiumSnapshot(driver, 'test');
 });
 ```
-- Finally, when running your tests, wrap the test command with `percy exec`. For
-  example: `percy exec -- jest`. Be sure your `PERCY_TOKEN` is set in the
-  terminal you're running `percy exec` from (you can get your `PERCY_TOKEN` from
-  your Percy projects settings).
+
+To execute percy:
+
+- First step is to set up PERCY_TOKEN as environment variable.
+
+  For Ubuntu and Mac devices,
+  ```
+  export PERCY_TOKEN=<your_token here>
+  ```
+  For Windows devices,
+  ```
+  set PERCY_TOKEN=<your_token here>
+  ```
+
+- Finally, when running your tests, wrap the test command with `percy exec`. Be sure your `PERCY_TOKEN` is set in the
+  terminal (you can get your `PERCY_TOKEN` from your Percy projects settings). For example:
+  ```
+  percy exec -- testScript.js
+  ```
