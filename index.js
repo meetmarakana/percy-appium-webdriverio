@@ -321,6 +321,11 @@ exports.percyAppiumSnapshot = async function percyAppiumSnapshot(driver, name, o
   // <style> tag in the document, but using inline styles seems to work
   const inlineStyle = css.replace(/([\s]*)\n([\s]*)/g, '');
 
+  let imgStyle = "margin: 0px; width: 100%;";
+  if (options.imgCSS) {
+    imgStyle = options.imgCSS;
+  }
+
   // Create a fake HTML document that just renders a single DOM node with
   // the screenshot
   const html = `
@@ -330,7 +335,7 @@ exports.percyAppiumSnapshot = async function percyAppiumSnapshot(driver, name, o
         <title>${name}</title>
       </head>
       <body style="margin: 0px; width: 100%;">
-        <img src="${inlineStyle}" style="margin: 0px; width: 100%;">
+        <img src="${inlineStyle}" style="${imgStyle}">
       </body>
     </html>
   `;
